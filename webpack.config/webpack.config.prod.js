@@ -9,7 +9,7 @@ const config = merge( commonConfig, {
       cacheGroups: {
         styles: {
           name: 'styles',
-          test: /\.css$/,
+          test: /\.(sa|sc|c)ss$/,
           chunks: 'all',
           enforce: true,
         },
@@ -17,9 +17,9 @@ const config = merge( commonConfig, {
     },
   },
   plugins: [
-    new MiniCssExtractPlugin( {
-                                filename: '[path][name].css',
-                              } ),
+    new MiniCssExtractPlugin({
+                               filename: '[name].css',
+                             } ),
   ],
   module: {
     rules: [
