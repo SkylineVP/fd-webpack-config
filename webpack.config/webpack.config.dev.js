@@ -1,9 +1,14 @@
-const merge = require( 'webpack-merge' );
-const commonConfig = require( './webpack.config.common.js' );
+const merge = require('webpack-merge');
+const path = require('path');
+const commonConfig = require('./webpack.config.common.js');
 
-const config = merge( commonConfig, {
+const config = merge(commonConfig, {
   mode: 'development',
   devtool: 'eval-source-map',
+  devServer: {
+    contentBase: path.join(__dirname, '../build'),
+
+  },
   module: {
     rules: [
       /*
