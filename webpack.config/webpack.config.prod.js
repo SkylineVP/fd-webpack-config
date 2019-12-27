@@ -17,9 +17,9 @@ const config = merge( commonConfig, {
     },
   },
   plugins: [
-    new MiniCssExtractPlugin({
-                               filename: '[name].css',
-                             } ),
+    new MiniCssExtractPlugin( {
+                                filename: '[name].css',
+                              } ),
   ],
   module: {
     rules: [
